@@ -29,10 +29,12 @@ function FormikForm() {
               style={{ color: "red" }}
             />
           </div>
+          <br />
           <div>
             <Field type="email" name="email" placeholder="Email" />
             <ErrorMessage name="email" component="p" style={{ color: "red" }} />
           </div>
+          <br />
           <div>
             <Field type="password" name="password" placeholder="Password" />
             <ErrorMessage
@@ -41,6 +43,7 @@ function FormikForm() {
               style={{ color: "red" }}
             />
           </div>
+          <br />
           <button type="submit" disabled={isSubmitting}>
             Register
           </button>

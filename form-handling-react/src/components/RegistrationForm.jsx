@@ -24,11 +24,11 @@ function RegistrationForm() {
       setErrors(validationErrors);
       return;
     }
-    console.log({
-      username: formData.username,
-      email: formData.email,
-      password: formData.password,
-    });
+    console.log(
+      "username:", formData.username, "\n",
+      "email:", formData.email, "\n",
+      "password:", formData.password, "\n"
+    );
     setErrors({});
   };
   return (
@@ -46,6 +46,7 @@ function RegistrationForm() {
           <span style={{ color: "red" }}>{errors.username}</span>
         )}
       </div>
+      <br />
       <div>
         <label>Email:</label>
         <input
@@ -55,6 +56,7 @@ function RegistrationForm() {
         />
         {errors.email && <span style={{ color: "red" }}>{errors.email}</span>}
       </div>
+      <br />
       <div>
         <label>Password:</label>
         <input
@@ -68,7 +70,9 @@ function RegistrationForm() {
           <span style={{ color: "red" }}>{errors.password}</span>
         )}
       </div>
+      <br />
       <button type="submit">Register</button>
+      <br />
       <button
         type="reset"
         onClick={() => setFormData({ username: "", email: "", password: "" })}
